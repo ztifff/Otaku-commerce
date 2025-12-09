@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+  react-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: react-prod
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]   # use curl instead of wget
+      interval: 30s
+      timeout: 10s
+      retries: 3
