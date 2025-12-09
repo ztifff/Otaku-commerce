@@ -178,7 +178,7 @@ function Checkout() {
               {cartItems.map((item) => (
                 <div key={item.id} className="d-flex align-items-center mb-2">
                   <Image
-                    src={p.image_url} alt={p.name}
+                    src={product.image_url} alt={product.name}
 
                     width={60}
                     height={60}

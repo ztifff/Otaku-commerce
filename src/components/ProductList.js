@@ -13,7 +13,7 @@ function ProductCard({ product, onAdd, adding }) {
   return (
     <Card className="card-product h-100">
       <div className="product-img">
-      <img src={p.image_url} alt={p.name} />
+      <img src={product.image_url} alt={product.name} />
 
       </div>
       <Card.Body className="p-3 d-flex flex-column">

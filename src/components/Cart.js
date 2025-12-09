@@ -82,7 +82,7 @@ function Cart() {
               {cartItems.map((item) => (
                 <tr key={item.id}>
                   <td className="d-flex align-items-center gap-3">
-                  <img src={p.image_url} alt={p.name}
+                  <img src={product.image_url} alt={product.name}
 
                       width="70"
                       height="70"

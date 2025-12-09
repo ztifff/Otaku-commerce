@@ -66,7 +66,7 @@ function ProductDetails() {
         <h2 className="fw-bold mb-4">Product Details</h2>
         <Row className="g-4">
           <Col md={5} className="text-center">
-          <img src={p.image_url} alt={p.name}
+          <img src={product.image_url} alt={product.name}
 
               className="img-fluid rounded"
               style={{ maxHeight: 400, objectFit: "contain" }}
