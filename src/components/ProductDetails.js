@@ -66,9 +66,10 @@ function ProductDetails() {
         <h2 className="fw-bold mb-4">Product Details</h2>
         <Row className="g-4">
           <Col md={5} className="text-center">
-            <img
-              src={`http://192.168.99.100:8082/${product.image}`}
-              alt={product.name}
+          <img
+  src={`https://your-railway-domain.up.railway.app${product.image}`}
+  alt={product.name}
+
               className="img-fluid rounded"
               style={{ maxHeight: 400, objectFit: "contain" }}
             />

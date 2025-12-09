@@ -83,7 +83,7 @@ function Cart() {
                 <tr key={item.id}>
                   <td className="d-flex align-items-center gap-3">
                     <img
-                      src={`https://laravel-backend-production-f902.up.railway.app/${item.product?.image || ''}`}
+                      src={`https://laravel-backend-production-f902.up.railway.app${item.product?.image || ''}`}
                       alt={item.product?.name || 'Product'}
                       width="70"
                       height="70"
