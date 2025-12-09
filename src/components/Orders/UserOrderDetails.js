@@ -40,7 +40,7 @@ const UserOrderDetails = () => {
 
       <h5 className="mt-3">Items</h5>
       <ul className="list-group mb-3">
-        {order.orderItems?.map((item) => (
+        {order.order_items?.map((item) => (
           <li key={item.id}>
           {item.product.name} — {item.quantity} × ₱{item.price.toLocaleString()}
         </li>
