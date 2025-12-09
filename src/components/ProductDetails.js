@@ -67,8 +67,8 @@ function ProductDetails() {
         <Row className="g-4">
           <Col md={5} className="text-center">
           <img
-  src={product?.image_url}
-  alt={product?.name}
+  src={`https://laravel-backend-production-f902.up.railway.app/${product.image}`}
+  alt={product.name}
   className="img-fluid rounded"
   style={{ maxHeight: 400, objectFit: "contain" }}
 />

@@ -13,10 +13,7 @@ function ProductCard({ product, onAdd, adding }) {
   return (
     <Card className="card-product h-100">
       <div className="product-img">
-      <img
-  src={product?.image_url}
-  alt={product?.name}
-/>
+      <img src={`https://laravel-backend-production-f902.up.railway.app/${product.image}`} alt={product.name} />
 
 
       </div>

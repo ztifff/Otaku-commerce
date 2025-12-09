@@ -28,11 +28,7 @@ function CategoryBlock({ title, items }) {
           <Col key={p.id}>
             <Card className="card-product h-100">
               <div className="product-img">
-              <img
-  src={p?.image_url}
-  alt={p?.name}
-/>
-
+              <img src={`https://laravel-backend-production-f902.up.railway.app/${p.image}`} alt={p.name} />
 
               </div>
               <Card.Body className="p-3">
