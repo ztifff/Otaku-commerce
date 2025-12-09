@@ -178,7 +178,7 @@ function Checkout() {
               {cartItems.map((item) => (
                 <div key={item.id} className="d-flex align-items-center mb-2">
                   <Image
-  src={`https://laravel-backend-production-f902.up.railway.app/${encodeURI(item.product.image)}`}
+  src={`https://laravel-backend-production-f902.up.railway.app${encodeURI(item.product.image)}`}
   width={60}
   height={60}
   rounded
