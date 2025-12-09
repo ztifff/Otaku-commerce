@@ -28,10 +28,7 @@ function CategoryBlock({ title, items }) {
           <Col key={p.id}>
             <Card className="card-product h-100">
               <div className="product-img">
-                <img
-  src={`https://your-railway-domain.up.railway.app${product.image}`}
-  alt={product.name}
-/>
+                <img src={`https://laravel-backend-production-f902.up.railway.app/${p.image}`} alt={p.name} />
               </div>
               <Card.Body className="p-3">
                 <div className="d-flex justify-content-between align-items-start mb-2">
