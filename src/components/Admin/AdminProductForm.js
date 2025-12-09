@@ -26,7 +26,7 @@ function AdminProductForm() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const res = await fetch("http://192.168.99.100:8082/api/admin/categories", {
+        const res = await fetch("https://laravel-backend-production-f902.up.railway.app/api/admin/categories", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!res.ok) throw new Error("Failed to fetch categories");
@@ -64,7 +64,7 @@ function AdminProductForm() {
       formData.append("category_id", form.category_id);
       if (form.image) formData.append("image", form.image);
 
-      const res = await fetch("http://192.168.99.100:8082/api/admin/products", {
+      const res = await fetch("https://laravel-backend-production-f902.up.railway.app/api/admin/products", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,

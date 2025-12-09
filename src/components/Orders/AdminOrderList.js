@@ -10,7 +10,7 @@ const AdminOrderList = () => {
   const fetchOrders = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://192.168.99.100:8082/api/admin/orders", {
+      const res = await fetch("https://laravel-backend-production-f902.up.railway.app/api/admin/orders", {
         headers: { Authorization: `Bearer ${token}` },
       });
 

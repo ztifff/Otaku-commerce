@@ -18,7 +18,7 @@ function AdminProductList() {
     const fetchProducts = async () => {
       try {
         const res = await fetch(
-          "http://192.168.99.100:8082/api/admin/products",
+          "https://laravel-backend-production-f902.up.railway.app/api/admin/products",
           { headers: { Authorization: `Bearer ${token}` } }
         );
         const data = await res.json();
@@ -38,7 +38,7 @@ function AdminProductList() {
     setDeletingId(id); // start deleting
     try {
       const res = await fetch(
-        `http://192.168.99.100:8082/api/admin/products/${id}`,
+        `https://laravel-backend-production-f902.up.railway.app/api/admin/products/${id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },

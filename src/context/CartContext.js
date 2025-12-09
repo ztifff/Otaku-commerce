@@ -15,7 +15,7 @@ export const CartProvider = ({ children }) => {
     if (!user) return setCartItems([]);
     setLoading(true);
     try {
-      const res = await fetch(`http://192.168.99.100:8082/api/cart`, {
+      const res = await fetch(`https://laravel-backend-production-f902.up.railway.app/api/cart`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -51,7 +51,7 @@ export const CartProvider = ({ children }) => {
     }
     setActionLoading(true);
     try {
-      const res = await fetch(`http://192.168.99.100:8082/api/cart`, {
+      const res = await fetch(`https://laravel-backend-production-f902.up.railway.app/api/cart`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ export const CartProvider = ({ children }) => {
     if (!user) return;
     setActionLoading(true);
     try {
-      const res = await fetch(`http://192.168.99.100:8082/api/cart/${id}`, {
+      const res = await fetch(`https://laravel-backend-production-f902.up.railway.app/api/cart/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -120,7 +120,7 @@ export const CartProvider = ({ children }) => {
     if (!user) return;
     setActionLoading(true);
     try {
-      const res = await fetch(`http://192.168.99.100:8082/api/cart/${id}`, {
+      const res = await fetch(`https://laravel-backend-production-f902.up.railway.app/api/cart/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

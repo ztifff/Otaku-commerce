@@ -40,7 +40,7 @@ function Checkout() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://192.168.99.100:8082/api/orders", {
+      const res = await fetch("https://laravel-backend-production-f902.up.railway.app/api/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -178,7 +178,7 @@ function Checkout() {
               {cartItems.map((item) => (
                 <div key={item.id} className="d-flex align-items-center mb-2">
                   <Image
-                    src={`http://localhost:8000${encodeURI(item.product.image)}`}
+                    src={`https://laravel-backend-production-f902.up.railway.app/${encodeURI(item.product.image)}`}
                     width={60}
                     height={60}
                     rounded

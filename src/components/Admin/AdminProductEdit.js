@@ -30,7 +30,7 @@ function AdminProductEdit() {
     const fetchCategories = async () => {
       try {
         const res = await fetch(
-          "http://192.168.99.100:8082/api/admin/categories",
+          "https://laravel-backend-production-f902.up.railway.app/api/admin/categories",
           { headers: { Authorization: `Bearer ${token}` } }
         );
         if (!res.ok) throw new Error("Failed to fetch categories");
@@ -49,7 +49,7 @@ function AdminProductEdit() {
       setFetching(true);
       try {
         const res = await fetch(
-          `http://192.168.99.100:8082/api/admin/products/${id}`,
+          `https://laravel-backend-production-f902.up.railway.app/api/admin/products/${id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         if (!res.ok) throw new Error("Failed to fetch product");
@@ -93,7 +93,7 @@ function AdminProductEdit() {
       formData.append("_method", "PUT");
 
       const res = await fetch(
-        `http://192.168.99.100:8082/api/admin/products/${id}`,
+        `https://laravel-backend-production-f902.up.railway.app/api/admin/products/${id}`,
         {
           method: "POST",
           headers: { Authorization: `Bearer ${token}` },

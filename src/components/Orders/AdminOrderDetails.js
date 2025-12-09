@@ -14,7 +14,7 @@ const AdminOrderDetails = () => {
   const fetchOrder = async () => {
     try {
       const res = await fetch(
-        `http://192.168.99.100:8082/api/admin/orders/${id}`,
+        `https://laravel-backend-production-f902.up.railway.app/api/admin/orders/${id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -31,7 +31,7 @@ const AdminOrderDetails = () => {
     setIsUpdating(true); // START
     try {
       const res = await fetch(
-        `http://192.168.99.100:8082/api/admin/orders/${id}/status`,
+        `https://laravel-backend-production-f902.up.railway.app/api/admin/orders/${id}/status`,
         {
           method: "PUT",
           headers: {

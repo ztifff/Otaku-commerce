@@ -7,7 +7,7 @@ export function useProducts() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://192.168.99.100:8082/api/products")
+    fetch("https://laravel-backend-production-f902.up.railway.app/api/products")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch products");

@@ -17,7 +17,7 @@ function Login() {
     setLoading(true); // start loading
 
     try {
-      const res = await fetch("http://192.168.99.100:8082/api/login", {
+      const res = await fetch("https://laravel-backend-production-f902.up.railway.app/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({ 
