@@ -178,13 +178,14 @@ function Checkout() {
               {cartItems.map((item) => (
                 <div key={item.id} className="d-flex align-items-center mb-2">
                   <Image
-                    src={product.image_url} alt={product.name}
+  src={item.product?.image_url}
+  alt={item.product?.name}
+  width={60}
+  height={60}
+  rounded
+  style={{ objectFit: "cover" }}
+/>
 
-                    width={60}
-                    height={60}
-                    rounded
-                    style={{ objectFit: "cover" }}
-                  />
                   <div className="ms-2 flex-grow-1 small">
                     <strong>{item.product.name}</strong>
                     <div>₱{item.product.price.toLocaleString()}</div>

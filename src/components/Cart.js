@@ -82,12 +82,14 @@ function Cart() {
               {cartItems.map((item) => (
                 <tr key={item.id}>
                   <td className="d-flex align-items-center gap-3">
-                  <img src={product.image_url} alt={product.name}
+                  <img
+                  src={item.product?.image_url}
+                    alt={item.product?.name}
+                   width="70"
+               height="70"
+               style={{ objectFit: 'cover', borderRadius: 8 }}
+/>
 
-                      width="70"
-                      height="70"
-                      style={{ objectFit: 'cover', borderRadius: 8 }}
-                    />
                     <div>
                       <p className="m-0 fw-semibold">{item.product?.name || 'Product'}</p>
                       <p className="text-muted small m-0">₱{(item.product?.price || 0).toLocaleString()}</p>
